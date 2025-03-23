@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+  display: block;
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+::webkit-scrollbar{
+  display: none;
+}
+*{
+  font-family: "Outfit", sans-serif;
+}
+@media (max-width: 640px) {
+ a.active{
+  background-color: black;
+  color: white;
+ }
+}
+@keyframes shine {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    to right,
+    #3B82F6 20%,
+    #8B5CF6 40%,
+    #8B5CF6 60%,
+    #3B82F6 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
